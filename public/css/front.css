@@ -1,0 +1,236 @@
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: saturate();
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero h1 {
+    font-family: "WindSong", cursive;
+    font-size: 6rem;
+    font-style: italic;
+}
+
+.hero h4 {
+    letter-spacing: 5px;
+    font-size: 1.6rem;
+}
+
+.hero p {
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.hero a {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.home {
+    background-image: url("/img/home.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 10rem;
+}
+
+.home h1 {
+    font-family: "WindSong", cursive;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+.home h3 {
+    letter-spacing: 5px;
+    font-size: 1.6rem;
+}
+
+.home h4 {
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+}
+
+.home p {
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.quotes {
+    background-color: #f5edea;
+    min-height: 100vh;
+    color: #552018;
+}
+
+.couple {
+    background-color: #dfd1c4;
+    color: #552018;
+}
+
+.couple .title {
+    font-family: "WindSong", cursive;
+    font-size: 4rem;
+}
+
+.couple h1 {
+    font-family: "WindSong", cursive;
+    font-size: 4rem;
+}
+
+.couple h3 {
+    letter-spacing: 0.3rem;
+}
+
+.couple h4 {
+    font-size: 1.2rem;
+}
+
+.about-us {
+    background-color: #dfd1c4;
+    /* min-height: 100vh; */
+}
+
+.about-us h1 {
+    font-family: "WindSong", cursive;
+    font-size: 4rem;
+    color: #552018;
+}
+
+.main-content {
+    min-height: 100vh;
+    background-image: url("/img/main.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content h1 {
+    font-family: "WindSong", cursive;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+.main-content h2 {
+    font-family: "Cormorant Garamond", cursive;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.main-content h4 {
+    font-weight: 300;
+}
+
+.angpao {
+    background-color: #f9eae1;
+    color: #552018;
+}
+
+.copy-text button:before {
+    content: "Copied";
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+}
+
+.copy-text button:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background: #5c81dc;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+
+    .potrait {
+        width: 300px !important;
+    }
+
+    .galery {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    .potrait {
+        width: 300px !important;
+    }
+
+    .galery {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 57.5%;
+    }
+
+    .potrait {
+        width: 250px !important;
+    }
+
+    .galery {
+        width: 250px;
+    }
+}

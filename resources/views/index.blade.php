@@ -20,13 +20,15 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="{{ asset('/css/simplyCountdown.theme.default.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/front.css') }}">
 <script src="{{ asset('js/simplyCountdown.min.js') }}"></script>
+
 @push('style')
     <style>
         :root {
             --pink: #f14e95;
             --bg: #0a0a0a;
-            --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+            --shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         }
 
         html {
@@ -35,246 +37,11 @@
 
         body {
             font-size: 1.2rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/img/hero.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -1;
-            filter: saturate();
-        }
-
-        .hero {
-            position: relative;
-            min-height: 100vh;
-
-        }
-
-        .hero h1 {
-            font-family: 'WindSong', cursive;
-            font-size: 6rem;
-            font-style: italic;
-        }
-
-        .hero h4 {
-            letter-spacing: 5px;
-            font-size: 1.6rem;
-        }
-
-        .hero p {
-            letter-spacing: 2px;
-            font-weight: 300;
-        }
-
-        .hero a {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .hero a:hover {
-            background-color: rgba(255, 255, 255, 1);
-            color: black;
-        }
-
-
-        .home {
-            background-image: url('img/home.jpeg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            padding-top: 10rem;
-        }
-
-        .home h1 {
-            font-family: 'WindSong', cursive;
-            font-size: 5rem;
-            font-style: italic;
-        }
-
-        .home h3 {
-            letter-spacing: 5px;
-            font-size: 1.6rem;
-        }
-
-        .home h4 {
-            letter-spacing: 2px;
-            font-size: 1.6rem;
-        }
-
-        .home p {
-            letter-spacing: 2px;
-            font-weight: 300;
-        }
-
-        .quotes {
-            background-color: #F5EDEA;
-            min-height: 100vh;
-            color: #552018;
-        }
-
-        .couple {
-            background-color: #DFD1C4;
-            color: #552018;
-        }
-
-        .couple .title {
-            font-family: 'WindSong', cursive;
-            font-size: 4rem;
-        }
-
-        .couple .potrait h1 {
-            font-family: 'WindSong', cursive;
-            font-size: 4rem;
-        }
-
-        .couple .potrait h3 {
-            letter-spacing: 0.3rem;
-        }
-
-        .couple .potrait h4 {
-            font-size: 1.2rem;
-        }
-
-        .about-us {
-            background-color: #DFD1C4;
-            /* min-height: 100vh; */
-        }
-
-        .about-us h1 {
-            font-family: 'WindSong', cursive;
-            font-size: 4rem;
-            color: #552018;
-        }
-
-        .main-content {
-            background-image: url('img/home.jpeg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-        }
-
-        .main-content h1 {
-            font-family: 'WindSong', cursive;
-            font-size: 5rem;
-            font-style: italic;
-        }
-
-        .main-content h2 {
-            font-family: 'Cormorant Garamond', cursive;
-            font-weight: 700;
-            letter-spacing: 5px;
-        }
-
-        .main-content h4 {
-            font-weight: 300;
-        }
-
-        .angpao {
-            background-color: #f9eae1;
-            color: #552018;
-        }
-
-        .copy-text button:before {
-            content: "Copied";
-            position: absolute;
-            top: -45px;
-            right: 0px;
-            background: #5c81dc;
-            padding: 8px 10px;
-            border-radius: 20px;
-            font-size: 15px;
-            display: none;
-        }
-
-        .copy-text button:after {
-            content: "";
-            position: absolute;
-            top: -20px;
-            right: 25px;
-            width: 10px;
-            height: 10px;
-            background: #5c81dc;
-            transform: rotate(45deg);
-            display: none;
-        }
-
-        .audio-icon-wrapper {
-            width: 4rem;
-            height: 4rem;
-            font-size: 4rem;
-            position: fixed;
-            bottom: 2.5rem;
-            right: 2rem;
-            cursor: pointer;
-            color: white;
-            opacity: 0.5;
-            mix-blend-mode: difference;
-            animation: rotating 4s linear infinite;
-            transform-origin: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 0;
-        }
-
-        @keyframes rotating {
-            from {
-                transform: rotate(0)
-            }
-
-            to {
-                transform: rotate(360deg)
-            }
-        }
-
-        @media (max-width:992px) {
-            html {
-                font-size: 75%;
-            }
-
-            .potrait {
-                width: 300px !important;
-            }
-
-            .galery {
-                width: 250px !important;
-            }
-        }
-
-        @media (max-width:768px) {
-            html {
-                font-size: 65%;
-            }
-
-            .potrait {
-                width: 300px !important;
-            }
-
-            .galery {
-                width: 250px;
-            }
-        }
-
-        @media (max-width:576px) {
-            html {
-                font-size: 57.5%;
-            }
-
-            .potrait {
-                width: 250px !important;
-            }
-
-            .galery {
-                width: 250px;
-            }
+        .dark-shadow {
+            text-shadow: var(--shadow);
         }
     </style>
 @endpush
@@ -285,21 +52,21 @@
         <section id="hero"
             class="hero h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
             <main>
-                <h4 class="mb-3" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-out"
+                <h4 class="mb-3 dark-shadow" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-out"
                     data-aos-duration="1000">Undangan Pernikahan
                 </h4>
-                <h4 class="mb-5" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out"
+                <h4 class="mb-5 dark-shadow" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out"
                     data-aos-duration="1500">Kepada <span class="text-capitalize"></span></h4>
-                <h1 class="p-5" data-aos="zoom-in" data-aos-duration="1500">Laily & Fachryzal</h1>
-                <h4 data-aos="fade-down" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="1500">
+                <h1 class="p-5 dark-shadow" data-aos="zoom-in" data-aos-duration="1500">Laily & Fachryzal</h1>
+                <h4 data-aos="fade-down text" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="1500">
                     05.05.2024</h4>
-                <div class="countdown mb-5" data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-in-out"
-                    data-aos-duration="1000"></div>
-                <a href="#home" class="btn btn-lg mt-5" data-aos="fade-down" data-aos-delay="550"
+                <div class="countdown mb-5 dark-shadow" data-aos="fade-down" data-aos-delay="500"
+                    data-aos-easing="ease-in-out" data-aos-duration="1000"></div>
+                <a href="#home" class="btn btn-lg mt-5 shadow" data-aos="fade-down" data-aos-delay="550"
                     data-aos-easing="ease-in-out" data-aos-duration="500" onclick="enableScroll()"><i
                         class="bx bx-envelope-open"></i> Buka
                     Undangan</a>
-                <p class="mt-1" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-in-out"
+                <p class="mt-1 dark-shadow" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-in-out"
                     data-aos-duration="0">#LailyFachryzal
                 </p>
             </main>
@@ -309,13 +76,17 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
-                        <h3 class="mb-2" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">Pernikahan
+                        <h3 class="mb-2" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
+                            Pernikahan
                         </h3>
                         <h1 class="p-3 fw-semi-bold" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="2000">Laily
                             &
                             Fachryzal</h1>
-                        <h4 data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"> Minggu, 05 Mei 2024</h4>
-                        <p data-aos="fade-down" data-aos-delay="550" data-aos-duration="500">#LailyFachryzal</p>
+                        <h4 data-aos="fade-down " data-aos-delay="500" data-aos-duration="1000">
+                            Minggu, 05 Mei
+                            2024</h4>
+                        <p data-aos="fade-down" data-aos-delay="550" data-aos-duration="500">#LailyFachryzal
+                        </p>
                     </div>
                 </div>
             </div>
@@ -325,7 +96,7 @@
             class="quotes w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
             <div class="d-flex justify-content-center align-items-center flex-wrap-reverse">
                 <div class="p-5">
-                    <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/home.jpeg') }}" alt=""
+                    <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/quotes.jpg') }}" alt=""
                         style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#7D4F50"
                         data-aos="fade-right" data-aos-delay="50">
                 </div>
@@ -349,12 +120,12 @@
                         data-aos-delay="50" style="max-width:200px">
                     <h1 class="title">Tentang Kami</h1>
                 </div>
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="p-5 w-50 potrait text-center">
+                <div class="row mt-5 text-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
                         <img class="rounded-circle border border-5 img-fluid object-fit-cover"
-                            src="{{ asset('img/home.jpeg') }}" alt="" data-aos="fade-right"
+                            src="{{ asset('img/woman.jpg') }}" alt="" data-aos="fade-down"
                             style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#d1be9c">
-                        <div class="container" data-aos="fade-right" data-aos-delay="150">
+                        <div class="container" data-aos="fade-down" data-aos-delay="150">
                             <h1 class="mt-5">Laily</h1>
                             <h3 class="mt-5">Laili Nurhidayah</h3>
                             <hr>
@@ -363,11 +134,11 @@
                                     style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
                         </div>
                     </div>
-                    <div class="p-5 w-50 potrait text-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <img class="rounded-circle border border-5 img-fluid object-fit-cover"
-                            src="{{ asset('img/home.jpeg') }}" alt="" data-aos="fade-left"
-                            style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#7D4F50">
-                        <div class="container" data-aos="fade-left" data-aos-delay="150">
+                            src="{{ asset('img/man.jpg') }}" alt="" data-aos="fade-up"
+                            style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#d1be9c">
+                        <div class="container" data-aos="fade-up" data-aos-delay="150">
                             <h1 class="mt-5">Fachryzal</h1>
                             <h3 class="mt-5">Fachryzal Candra Trisnawan</h3>
                             <hr>
@@ -377,6 +148,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -395,7 +167,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 mb-5" data-aos="zoom-in">
-                        <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/home.jpeg') }}"
+                        <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/akad.jpg') }}"
                             alt=""
                             style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#7D4F50">
                     </div>
@@ -436,14 +208,14 @@
                                 Peta</a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
-                            <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/home.jpeg') }}"
+                            <img class="rounded-5 img-fluid object-fit-cover" src="{{ asset('img/resepsi.jpg') }}"
                                 alt="" data-aos="zoom-in"
                                 style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#7D4F50">
                         </div>
                     </div>
-
                 </div>
             </div>
+
         </section>
 
         <section id="about-us" class="about-us">
