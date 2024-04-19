@@ -139,8 +139,10 @@
                             <h3 class="mt-5">Fachryzal Candra Trisnawan</h3>
                             <hr>
                             <h4 class="lead">Putra pertama dari Bpk. Sutrisno & Ibu Susilowati</h4>
-                            <span><i class="bx bxl-instagram rounded-circle p-2 mt-3"
-                                    style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
+                            <span><a href="https://www.instagram.com/fachryzalct/"
+                                    style="color: inherit;text-decoration:inherit" target="_blank"
+                                    rel="noopener noreferrer"><i class="bx bxl-instagram rounded-circle p-2 mt-3"
+                                        style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></a></span>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
@@ -152,8 +154,10 @@
                             <h3 class="mt-5">Laili Nurhidayah</h3>
                             <hr>
                             <h4 class="lead">Putri pertama dari Bpk. Abdul Aziz & Ibu Muntiari</h4>
-                            <span><i class="bx bxl-instagram rounded-circle p-2 mt-3"
-                                    style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
+                            <span><a href="https://www.instagram.com/lailyhidayah_"
+                                    style="color: inherit;text-decoration:inherit" target="_blank"
+                                    rel="noopener noreferrer"><i class="bx bxl-instagram rounded-circle p-2 mt-3"
+                                        style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></a></span>
                         </div>
                     </div>
                 </div>
