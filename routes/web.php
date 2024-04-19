@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/laily', function (Request $request) {
+    return view('laily', ['name' => $request->name]);
+});
+Route::get('/fachryzal', function (Request $request) {
+    return view('fachryzal', ['name' => $request->name]);
+});
+Route::get('/sutrisno', function (Request $request) {
+    return view('sutrisno', ['name' => $request->name]);
 });

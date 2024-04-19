@@ -1,4 +1,10 @@
 @extends('layouts.master')
+
+@push('meta')
+    <meta name="title" content="Laily & Fachryzal Wedding">
+    <meta name="description" content="Senin, 06 Mei 2024">
+@endpush
+
 @section('title', 'Laili & Fachryzal Wedding')
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -40,6 +46,10 @@
             font-family: "Poppins", sans-serif;
         }
 
+        .hero::before {
+            background-image: url("/img/ortu.jpg") !important;
+        }
+
         .dark-shadow {
             text-shadow: var(--shadow);
         }
@@ -52,24 +62,31 @@
         <section id="hero"
             class="hero h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
             <main>
-                <h4 class="mb-3 dark-shadow" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-out"
-                    data-aos-duration="1000">Undangan Pernikahan
+                <h4 class="{{ $name ? 'mb-3' : 'mb-5' }}dark-shadow" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-easing="ease-in-out" data-aos-duration="1000">Undangan
                 </h4>
-                {{-- @if ($name)
+                @if ($name)
                     <h4 class="mb-5 dark-shadow" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out"
-                        data-aos-duration="1500">Kepada <span class="text-capitalize">{{ $name }}</span></h4>
-                @endif --}}
-                <h1 class="p-5 dark-shadow" data-aos="zoom-in" data-aos-duration="1500">Laily & Fachryzal</h1>
+                        data-aos-duration="1000">Kepada <span class="text-capitalize">{{ $name }}</span></h4>
+                @endif
+                <div class="p-5">
+                    <h4 class="dark-shadow" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-out"
+                        data-aos-duration="1000">Keluarga
+                    </h4>
+                    <h1 class="dark-shadow" data-aos="zoom-in" data-aos-duration="1500">Sutrisno & Susilowati</h1>
+                </div>
+                <h4 data-aos="fade-down text" data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-duration="1500">
+                    Senin, 06 Mei 2024</h4>
                 <h4 data-aos="fade-down text" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="1500">
-                    05.05.2024</h4>
+                    Senin Pon, 27 Syawal 1445 H</h4>
                 <div class="countdown mb-5 dark-shadow" data-aos="fade-down" data-aos-delay="500"
                     data-aos-easing="ease-in-out" data-aos-duration="1000"></div>
-                {{-- <a href="#home" class="btn btn-lg mt-5 shadow" data-aos="fade-down" data-aos-delay="550"
+                <a href="#home" class="btn btn-lg mt-5 shadow" data-aos="fade-down" data-aos-delay="550"
                     data-aos-easing="ease-in-out" data-aos-duration="500" onclick="enableScroll()"><i
                         class="bx bx-envelope-open"></i> Buka
-                    Undangan</a> --}}
+                    Undangan</a>
                 <p class="mt-1 dark-shadow" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-in-out"
-                    data-aos-duration="0">#LailyFachryzal
+                    data-aos-duration="0">#FachryzalLaily
                 </p>
             </main>
         </section>
@@ -82,14 +99,14 @@
                             Pernikahan
                         </h3>
                         <h1 class="p-3 fw-semi-bold dark-shadow" data-aos="zoom-in" data-aos-delay="100"
-                            data-aos-duration="2000">Laily
+                            data-aos-duration="2000">Fachryzal
                             &
-                            Fachryzal</h1>
+                            Laily</h1>
                         <h4 class="dark-shadow" data-aos="fade-down " data-aos-delay="500" data-aos-duration="1000">
-                            Minggu, 05 Mei
+                            Senin, 06 Mei
                             2024</h4>
                         <p class="dark-shadow" data-aos="fade-down " data-aos-delay="550" data-aos-duration="500">
-                            #LailyFachryzal
+                            #FachryzalLaily
                         </p>
                     </div>
                 </div>
@@ -123,22 +140,9 @@
                 <div class="container text-center">
                     <img class="img-fluid" src="{{ asset('img/cosmos.png') }}" alt="" data-aos="fade-down"
                         data-aos-delay="50" style="max-width:200px">
-                    <h1 class="title">Tentang Kami</h1>
+                    <h1 class="title">Tentang Anak Kami</h1>
                 </div>
                 <div class="row mt-5 text-center">
-                    <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
-                        <img class="rounded-circle border border-5 img-fluid object-fit-cover"
-                            src="{{ asset('img/woman.jpg') }}" alt="" data-aos="fade-down"
-                            style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#d1be9c">
-                        <div class="container" data-aos="fade-down" data-aos-delay="150">
-                            <h1 class="mt-5">Laily</h1>
-                            <h3 class="mt-5">Laili Nurhidayah</h3>
-                            <hr>
-                            <h4 class="lead">Putri pertama dari Bpk. Abdul Aziz & Ibu Muntiari</h4>
-                            <span><i class="bx bxl-instagram rounded-circle p-2 mt-3"
-                                    style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
-                        </div>
-                    </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <img class="rounded-circle border border-5 img-fluid object-fit-cover"
                             src="{{ asset('img/man.jpg') }}" alt="" data-aos="fade-up"
@@ -148,6 +152,19 @@
                             <h3 class="mt-5">Fachryzal Candra Trisnawan</h3>
                             <hr>
                             <h4 class="lead">Putra pertama dari Bpk. Sutrisno & Ibu Susilowati</h4>
+                            <span><i class="bx bxl-instagram rounded-circle p-2 mt-3"
+                                    style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
+                        <img class="rounded-circle border border-5 img-fluid object-fit-cover"
+                            src="{{ asset('img/woman.jpg') }}" alt="" data-aos="fade-down"
+                            style="position:sticky;box-shadow:5px 10px 20px rgba(0, 0, 0, 0.3);aspect-ratio: 1 / 1; width:400px;color:#d1be9c">
+                        <div class="container" data-aos="fade-down" data-aos-delay="150">
+                            <h1 class="mt-5">Laily</h1>
+                            <h3 class="mt-5">Laili Nurhidayah</h3>
+                            <hr>
+                            <h4 class="lead">Putri pertama dari Bpk. Abdul Aziz & Ibu Muntiari</h4>
                             <span><i class="bx bxl-instagram rounded-circle p-2 mt-3"
                                     style="font-size: 2.4rem; background-color:#f9eae1; cursor: pointer;"></i></span>
                         </div>
@@ -164,7 +181,7 @@
                         <h1 class="fw-semi-bold" data-aos="fade-up" data-aos-delay="200">Menuju<br>Hari Bahagia</h1>
                     </div>
                     <div class="col-12 mb-2">
-                        <h3 data-aos="zoom-in" class="fw-semi-bold">Minggu, 05 Mei 2024</h3>
+                        <h3 data-aos="zoom-in" class="fw-semi-bold">Senin, 06 Mei 2024</h3>
                     </div>
                     <div class="col-12">
                         <div class="countdown-master fw-semi-bold pb-5" data-aos="fade-down" data-aos-delay="200"
@@ -197,18 +214,18 @@
                     <div class="d-flex flex-wrap-reverse justify-content-center">
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
                             <h2 class="p-2 fs-1" data-aos="zoom-in">
-                                RESEPSI
+                                UNDUH MANTU
                             </h2>
                             <h4 class="p-2" data-aos="zoom-in">
-                                05 Mei 2024
+                                06 Mei 2024
                             </h4>
                             <h4 class="p-2" data-aos="zoom-in">
                                 13.00 - 21.00 WIB
                             </h4>
                             <h4 class="p-2" data-aos="zoom-in">
-                                Jl. Sumbergondo, Sumbergondo, Kec. Bumiaji, Kota Batu, Jawa Timur 65335
+                                Jl. Cemara Kipas, RT.01 / RW.01, Sidomulyo, Kota Batu
                             </h4>
-                            <a href="https://maps.app.goo.gl/fUsGKJ3g42HptH6X8" target="_blank" rel="noopener noreferrer"
+                            <a href="https://maps.app.goo.gl/u2XPbjgfaz13ryUo8" target="_blank" rel="noopener noreferrer"
                                 class="btn btn-lg btn-light rounded-5 w-50 fw-light opacity-75" data-aos="zoom-in">Lihat
                                 Peta</a>
                         </div>
@@ -280,7 +297,7 @@
 
 
 
-        <section id="angpao" class="angpao">
+        <section id="angpao" class="angpao" hidden>
             <div class="container text-center p-5">
                 <div class="row">
                     <div class="col-sm-12 p-5">
@@ -304,8 +321,8 @@
                                         Detail Bank Transfer
                                     </div>
                                     <div class="col-12">
-                                        <h4>Bank Maybank Indonesia</h4>
-                                        <h5>a.n Chrissy Gunawan</h5>
+                                        <h4>Bank Mandiri</h4>
+                                        <h5>a.n Fachryzal Candra Trisnawan</h5>
                                     </div>
                                     <div class="copy-text">
                                         <button class="copy-text btn btn-outline-dark" type="button" id="button-addon2">
@@ -313,7 +330,6 @@
                                                 <div class="p-2 flex-fill">
                                                     <input class="rekening" type="text" value="12345678911"
                                                         class="text" style="all:unset;">
-                                                    {{-- <p class="rekening">123456789</p> --}}
                                                 </div>
                                                 <div class="p-2">
                                                     <i class="bx bx-copy"></i>
@@ -412,9 +428,9 @@
         simplyCountdown('.countdown', {
             year: 2024, // required
             month: 5, // required
-            day: 5, // required
-            hours: 7, // Default is 0 [0-23] integer
-            minutes: 30, // Default is 0 [0-59] integer
+            day: 6, // required
+            hours: 0, // Default is 0 [0-23] integer
+            minutes: 0, // Default is 0 [0-59] integer
             seconds: 0, // Default is 0 [0-59] integer
             words: { //words displayed into the countdown
                 days: {
@@ -441,9 +457,9 @@
         simplyCountdown('.countdown-master', {
             year: 2024, // required
             month: 5, // required
-            day: 5, // required
-            hours: 7, // Default is 0 [0-23] integer
-            minutes: 30, // Default is 0 [0-59] integer
+            day: 6, // required
+            hours: 0, // Default is 0 [0-23] integer
+            minutes: 0, // Default is 0 [0-59] integer
             seconds: 0, // Default is 0 [0-59] integer
             words: { //words displayed into the countdown
                 days: {

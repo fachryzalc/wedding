@@ -219,6 +219,10 @@
     .galery {
         width: 250px;
     }
+
+    .home .container {
+        margin-top: 50% !important;
+    }
 }
 
 @media (max-width: 576px) {
@@ -232,5 +236,9 @@
 
     .galery {
         width: 250px;
+    }
+
+    .home .container {
+        margin-top: 50% !important;
     }
 }

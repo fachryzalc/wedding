@@ -1,4 +1,10 @@
 @extends('layouts.master')
+
+@push('meta')
+    <meta name="title" content="Laily & Fachryzal Wedding">
+    <meta name="description" content="Minggu, 05 Mei 2024">
+@endpush
+
 @section('title', 'Laili & Fachryzal Wedding')
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -52,24 +58,26 @@
         <section id="hero"
             class="hero h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
             <main>
-                <h4 class="mb-3 dark-shadow" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-out"
-                    data-aos-duration="1000">Undangan Pernikahan
+                <h4 class="mb-3 dark-shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="0"
+                    data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="1000">Undangan Pernikahan
                 </h4>
-                {{-- @if ($name)
+                @if ($name)
                     <h4 class="mb-5 dark-shadow" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out"
-                        data-aos-duration="1500">Kepada <span class="text-capitalize">{{ $name }}</span></h4>
-                @endif --}}
+                        data-aos-duration="1500" data-aos-anchor-placement="top-bottom">Kepada <span
+                            class="text-capitalize">{{ $name }}</span></h4>
+                @endif
                 <h1 class="p-5 dark-shadow" data-aos="zoom-in" data-aos-duration="1500">Laily & Fachryzal</h1>
                 <h4 data-aos="fade-down text" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="1500">
                     05.05.2024</h4>
                 <div class="countdown mb-5 dark-shadow" data-aos="fade-down" data-aos-delay="500"
                     data-aos-easing="ease-in-out" data-aos-duration="1000"></div>
-                {{-- <a href="#home" class="btn btn-lg mt-5 shadow" data-aos="fade-down" data-aos-delay="550"
-                    data-aos-easing="ease-in-out" data-aos-duration="500" onclick="enableScroll()"><i
+                <a href="#home" class="btn btn-lg mt-5 shadow" data-aos="fade-down" data-aos-delay="550"
+                    data-aos-easing="ease-in-out" data-aos-duration="500" onclick="enableScroll()" data-aos-offset="75"><i
                         class="bx bx-envelope-open"></i> Buka
-                    Undangan</a> --}}
-                <p class="mt-1 dark-shadow" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-in-out"
-                    data-aos-duration="0">#LailyFachryzal
+                    Undangan</a>
+                <p class="mt-1 dark-shadow test-anchor" data-aos="fade-down" data-aos-delay="600"
+                    data-aos-easing="ease-in-out" data-aos-duration="0" data-aos-anchor-placement="top-bottom">
+                    #LailyFachryzal
                 </p>
             </main>
         </section>
@@ -85,10 +93,10 @@
                             data-aos-duration="2000">Laily
                             &
                             Fachryzal</h1>
-                        <h4 class="dark-shadow" data-aos="fade-down " data-aos-delay="500" data-aos-duration="1000">
+                        <h4 class="dark-shadow" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
                             Minggu, 05 Mei
                             2024</h4>
-                        <p class="dark-shadow" data-aos="fade-down " data-aos-delay="550" data-aos-duration="500">
+                        <p class="dark-shadow" data-aos="fade-down" data-aos-delay="550" data-aos-duration="500">
                             #LailyFachryzal
                         </p>
                     </div>
@@ -105,8 +113,8 @@
                         data-aos="fade-right" data-aos-delay="50">
                 </div>
                 <div class="p-5">
-                    <img class="img-fluid mb-4" src="{{ asset('img/cosmos.png') }}" alt="" data-aos="fade-left"
-                        data-aos-delay="50" style="max-width:200px;margin-left:-20px;">
+                    <img class="img-fluid mb-4" src="{{ asset('img/lf.png') }}" alt="" data-aos="fade-left"
+                        data-aos-delay="50" style="max-width:50px;margin-left:-20px;">
                     <p data-aos="fade-down" data-aos-delay="100" class="fs-1">وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا
                         زَوْجَيْنِ
                         لَعَلَّكُمْ تَذَكَّرُوْنَ</p>
@@ -121,8 +129,8 @@
         <section id="couple" class="couple">
             <div class="d-flex align-items-center flex-column justify-content-center p-5">
                 <div class="container text-center">
-                    <img class="img-fluid" src="{{ asset('img/cosmos.png') }}" alt="" data-aos="fade-down"
-                        data-aos-delay="50" style="max-width:200px">
+                    <img class="img-fluid" src="{{ asset('img/lf.png') }}" alt="" data-aos="fade-down"
+                        data-aos-delay="50" style="max-width:50px">
                     <h1 class="title">Tentang Kami</h1>
                 </div>
                 <div class="row mt-5 text-center">
@@ -160,6 +168,10 @@
         <section class="main-content">
             <div class="container text-center text-white p-5">
                 <div class="row">
+                    <div class="col-12 text-center mb-3">
+                        <img class="img-fluid" src="{{ asset('img/lf-light.png') }}" alt="" data-aos="fade-down"
+                            data-aos-delay="50" style="max-width:50px">
+                    </div>
                     <div class="col-12 mb-5 ">
                         <h1 class="fw-semi-bold" data-aos="fade-up" data-aos-delay="200">Menuju<br>Hari Bahagia</h1>
                     </div>
@@ -227,6 +239,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center p-5 title">
+                        <img class="img-fluid" src="{{ asset('img/lf.png') }}" alt="" data-aos="fade-down"
+                            data-aos-delay="50" style="max-width:50px">
                         <h1>Galeri Foto</h1>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 text-center p-5">
@@ -284,6 +298,8 @@
             <div class="container text-center p-5">
                 <div class="row">
                     <div class="col-sm-12 p-5">
+                        <img class="img-fluid" src="{{ asset('img/lf.png') }}" alt="" data-aos="fade-down"
+                            data-aos-delay="50" style="max-width:50px">
                         <h1 data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">Amplop Digital</h1>
                         <p data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">Kehadiran & doa
                             Anda adalah hadiah
@@ -304,8 +320,8 @@
                                         Detail Bank Transfer
                                     </div>
                                     <div class="col-12">
-                                        <h4>Bank Maybank Indonesia</h4>
-                                        <h5>a.n Chrissy Gunawan</h5>
+                                        <h4>Bank Mandiri</h4>
+                                        <h5>a.n Laili Nurhidayah</h5>
                                     </div>
                                     <div class="copy-text">
                                         <button class="copy-text btn btn-outline-dark" type="button" id="button-addon2">

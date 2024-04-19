@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="author" content="Fachryzal">
+    <meta name="image" content="{{ asset('img/hero.jpg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/lf.png') }}">
     <title>@yield('title')</title>
 
     <!-- Fonts -->
